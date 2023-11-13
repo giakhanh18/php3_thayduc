@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClockController;
 use App\Http\Controllers\Khanh1Controller;
+use App\Http\Controllers\PeopleController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StudentController;
 use App\Models\Khanh1;
@@ -27,3 +28,4 @@ Route::resource('khanh1s',Khanh1Controller::class);
 Route::resource('category',CategoryController::class);
 Route::resource('students',StudentController::class);
 Route::resource('clocks',ClockController::class,);
+Route::resource('peoples',PeopleController::class);

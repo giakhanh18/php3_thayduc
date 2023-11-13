@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Clock;
 use App\Models\Khanh1;
+use App\Models\People;
 use App\Models\Student;
 use Illuminate\Database\Seeder;
 
@@ -27,5 +28,6 @@ class DatabaseSeeder extends Seeder
         Category::factory(10)->create();
         Student::factory(10)->create();
         Clock::factory(5)->create();
+        People::factory(5)->create();
     }
 }
