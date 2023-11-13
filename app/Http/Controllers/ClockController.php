@@ -49,7 +49,7 @@ class ClockController extends Controller
      */
     public function show(Clock $clock)
     {
-        return view(self::PATH_VIEW . __FUNCTION__, compact('clocks'));
+        return view(self::PATH_VIEW . __FUNCTION__, compact('clock'));
     }
 
     /**
@@ -57,7 +57,7 @@ class ClockController extends Controller
      */
     public function edit(Clock $clock)
     {
-        return view(self::PATH_VIEW . __FUNCTION__, compact('clocks'));
+        return view(self::PATH_VIEW . __FUNCTION__, compact('clock'));
     }
 
     /**
