@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\People;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 
 class PeopleController extends Controller
 {
@@ -33,6 +34,19 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'image'=>'required|image|max:2048',
+            'name'=>'required|max:50|unique:peple',
+            'date'=>'require',
+           ' gmail'=>'require',
+            'phone'=>'require',
+            'country'=>'require',
+        //     'oder'=>['require'
+        //             Rule::in([
+        //                 gọi nó ra People::gì gì đấy 
+        //             ])
+        // ],
+        ]);
         $data =$request->except(['image']);
 
         if($request->hasFile('image')){
